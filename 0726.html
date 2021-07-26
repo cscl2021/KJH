@@ -10,23 +10,79 @@
         h1{
           font-size: 4rem;
           font-family: 'Dancing Script', cursive;
-          rgb(255, 210, 212);
-          border:10px red solid;
+          border-bottom: 1px solid gray;
+          margin-left: 0px;
+          padding-left: 15px;
+          padding-bottom:15px;
         }
         a{
           text-decoration: none;
-          color:rgb(0, 174, 133);
+          color:#006400;
         }
         body{
           background-image : url('background1.jpg');
           background-repeat: no-repeat;
           background-size: cover;
         }
+        img{
+           display: block; margin: 0px auto;
+        }
+        .grid1{
+          display: grid;
+          grid-template-columns: 100px 100px 100px 1fr;
+          text-align: center;
+        }
+        .grid2{
+          display: grid;
+          grid-template-columns: 300px 1fr;
+        }
+        #toc-content{
+          padding: 30px;
+          margin:0px;
+        }
+        span {
+          border: 3px solid blue;
+        }
+        ul{
+          font-size: 20px;
+          list-style-type: square;
+          list-style-position: inside;
+        }
     </style>
+    <script>
+    function openCloseToc() {
+        if(document.getElementById('toc-content').style.display === 'none') {
+        document.getElementById('toc-content').style.display = 'block';
+        document.getElementById('toc-toggle').textContent = '메뉴닫기';
+        } else {
+        document.getElementById('toc-content').style.display = 'none';
+        document.getElementById('toc-toggle').textContent = '메뉴열기';
+        }
+    }
+    function openCloseToc2() {
+        document.getElementById('toc-content').style.display = 'none';
+        document.getElementById('toc-toggle').textContent = '메뉴열기';
+    }
+    </script>
 
   </head>
   <body>
     <h1><a href="0726.html">Floral.D</a></h1>
 
+    <div id="toggle" class="grid1">
+      <img src="menu.png" id="toc-toggle" onClick="openCloseToc()" width="30px">
+      <img src="best.png" id="toc-toggle2" onClick="openCloseToc2()"width="30px">
+      <img src="new.png" id="toc-toggle3" onClick="openCloseToc2()"width="30px">
+      <div></div>
+    </div>
+    <div class="grid2">
+      <ul id="toc-content">
+          <li>'꽃다발'</li>
+          <li>'꽃병'</li>
+          <li>'부케'</li>
+          <li>'꽃상자'</li>
+      </ul>
+      <div></div>
+    </div>
   </body>
 </html>
