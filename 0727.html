@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Floral.D</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+      <style>
+        h1{
+          font-size: 4rem;
+          font-family: 'Dancing Script', cursive;
+          border-bottom: 1px solid gray;
+          margin-left: 0px;
+          padding-left: 15px;
+          padding-bottom:15px;
+        }
+        a{
+          text-decoration: none;
+          color:#006400;
+        }
+        body{
+          background: url('background1.jpg') no-repeat center;
+        }
+        img{
+           display: block; margin: 0px auto;
+        }
+        .grid1{
+          display: grid;
+          grid-template-columns: 100px 100px 100px 1fr;
+          text-align: center;
+        }
+        .grid2{
+          display: grid;
+          grid-template-columns: 300px 1fr;
+        }
+        #toc-content{
+          padding: 20px;
+          margin:0px;
+        }
+        span {
+          border: 3px solid blue;
+        }
+        ul{
+          font-size: 20px;
+          list-style-type: square;
+          list-style-position: inside;
+        }
+        #menu{
+        }
+        #menu1{
+          margin:10px;
+          transition-property: all;
+          transition-duration: 2s;
+        }
+        #menu2{
+          margin:10px;
+          margin-top:20px;
+          transition-delay:1s;
+          transition-property: all;
+          transition-duration: 2s;
+        }
+    </style>
+    <script>
+      function openCloseToc() {
+        var toc1= document.getElementById('menu1');
+        var toc2= document.getElementById('menu2');
+        if(toc1.style.display === 'none'){
+          toc1.style.display = 'block';
+          toc2.style.display = 'block';
+
+        } else {
+          toc1.style.display = 'none';
+          toc2.style.display = 'none';
+
+        }
+      }
+      function openCloseToc2() {
+        var toc= document.getElementById('toc-content')
+        toc.style.display = 'none';
+      }
+    </script>
+
+  </head>
+  <body>
+    <h1><a href="0727.html">Floral.D</a></h1>
+
+    <div id="toggle" class="grid1">
+      <img id="menu" src="menu.png" onClick="openCloseToc()" width="30px">
+      <img src="best.png" onClick="openCloseToc2()"width="30px">
+      <img src="new.png" onClick="openCloseToc2()"width="30px">
+      <div></div>
+    </div>
+    <div class="grid2">
+      <div id="toc-content">
+          <img id="menu1" src="flower.png" width="35px">
+          <img id="menu2" src="flower-pot.png" width="35px">
+      </div>
+      <div></div>
+    </div>
+  </body>
+</html>
